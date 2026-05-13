@@ -3,7 +3,7 @@
 Fitness tracking and workout guidance platform with personalized exercise routines for different muscle groups.
 
 ## Live Demo
-Coming soon on Railway
+Coming soon on Vercel
 
 ## Features
 - Workout routines: Arms, Chest, Back, Legs
@@ -14,39 +14,43 @@ Coming soon on Railway
 - Trainer login system
 
 ## Tech Stack
-- **Backend**: Spring Boot 3.2.4, Java 21
 - **Frontend**: HTML5, CSS, JavaScript
-- **Deployment**: Docker, Railway
+- **API**: Vercel Serverless Functions
+- **Deployment**: Vercel
 
 ## Local Development
 
-### Backend
+### Start Spring Backend (optional)
 ```bash
 cd backend
 mvn spring-boot:run
 ```
 Server runs on `http://localhost:8080`
 
+### Frontend on Vercel-style routes
+- Workout pages call relative API routes (`/api/...`) for production compatibility.
+- For local testing without Vercel, run the Spring backend and open pages via `http://localhost:8080`.
+
 ### Project Structure
 ```
 web tech/
-├── backend/              # Spring Boot application
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-├── arms.html, chest.html, etc.  # Frontend (served by backend)
-└── railway.toml          # Railway deployment config
+├── api/                  # Vercel serverless APIs
+├── images/               # Static image assets
+├── *.html                # Frontend pages
+├── style.css
+└── backend/              # Optional local Spring backend
 ```
 
 ## Deployment
 
-### Deploy on Railway
+### Deploy on Vercel
 1. Push this repo to GitHub
-2. Go to railway.app
-3. Create new project from GitHub repo
-4. Railway auto-detects Dockerfile and deploys
+2. Go to vercel.com and import the repository
+3. Framework Preset: `Other`
+4. Root Directory: project root (`web tech`)
+5. Deploy
 
-The app is configured to work with Railway's environment variables automatically.
+The app serves static pages and API routes on the same domain.
 
 ## API Endpoints
 - `GET /api/arms` - Arm exercises

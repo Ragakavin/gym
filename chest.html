@@ -35,12 +35,12 @@
 </section>
 
 <script>
-    const API_BASE = 'http://localhost:8080/api';
+    const API_BASE = '/api';
     fetch(`${API_BASE}/chest`).then(r=>r.json()).then(data=>{
         const c=document.getElementById('workoutGrid');
         if(data.length===0){c.innerHTML='<p style="color:#94a3b8;text-align:center;padding:40px">Unable to load workouts.</p>';return}
         c.innerHTML=data.map(w=>`<div class="card"><img src="${w.image}" alt="${w.name}" ><h3>${w.name}</h3><p>${w.description}</p><p><strong>Reps:</strong> ${w.reps}</p><p><strong>Instructions:</strong> ${w.instructions}</p></div>`).join('');
-    }).catch(()=>document.getElementById('workoutGrid').innerHTML='<p style="color:#94a3b8;text-align:center;padding:40px">Backend not running on port 8080.</p>');
+    }).catch(()=>document.getElementById('workoutGrid').innerHTML='<p style="color:#94a3b8;text-align:center;padding:40px">Unable to load workouts right now.</p>');
 </script>
 
 <footer>

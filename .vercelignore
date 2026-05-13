@@ -1,0 +1,6 @@
+backend/target/
+backend/.mvn/
+backend/pom.xml
+backend/src/
+*.jar
+*.class

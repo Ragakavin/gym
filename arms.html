@@ -35,7 +35,7 @@
 </section>
 
 <script>
-    const API_BASE = 'http://localhost:8080/api';
+    const API_BASE = '/api';
     async function fetchWorkouts(muscle) {
         try {
             const res = await fetch(`${API_BASE}/${muscle}`);
@@ -50,7 +50,7 @@
         const container = document.getElementById('workoutGrid');
         if (!container) return;
         if (workouts.length === 0) {
-            container.innerHTML = '<p style="color:#94a3b8;text-align:center;padding:40px">Unable to load workouts. Make sure the backend is running on port 8080.</p>';
+            container.innerHTML = '<p style="color:#94a3b8;text-align:center;padding:40px">Unable to load workouts right now.</p>';
             return;
         }
         container.innerHTML = workouts.map(w => `
