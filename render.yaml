@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: uplift-app
+    env: docker
+    rootDir: backend
+    plan: free
+    autoDeploy: true

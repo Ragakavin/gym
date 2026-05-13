@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trainer Login - UPLIFT</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-shell {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 8%;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 460px;
+      background: #1e293b;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+    .login-card h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .login-card p {
+      color: #94a3b8;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+    .login-card label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .login-card input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #fff;
+    }
+    .login-card .btn {
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    .login-links {
+      margin-top: 16px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+    .login-links a {
+      color: #ef4444;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">UP<span>LIFT</span></div>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="chest.html">Chest</a></li>
+    <li><a href="back.html">Back</a></li>
+    <li><a href="legs.html">Legs</a></li>
+    <li><a href="arms.html">Arms</a></li>
+    <li><a href="progress.html">Progress</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="trainer-login.html" class="btn btn-secondary">Trainer Login</a>
+    <a href="#" class="btn">Register</a>
+  </div>
+</nav>
+
+<main class="login-shell">
+  <section class="login-card">
+    <h1>Trainer Login</h1>
+    <p>Access trainer records, client progress notes, and session planning tools.</p>
+    <form>
+      <label for="trainerEmail">Email</label>
+      <input id="trainerEmail" type="email" placeholder="trainer@example.com">
+
+      <label for="trainerPassword">Password</label>
+      <input id="trainerPassword" type="password" placeholder="Enter password">
+
+      <a href="#" class="btn">Login</a>
+    </form>
+    <div class="login-links">
+      <a href="home.html">Back to Home</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 UPLIFT Gym
+</footer>
+
+</body>
+</html>

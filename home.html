@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UPLIFT — Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Onboarding modal styles */
+    .onboard-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:9999}
+    .onboard-modal{background:#0f172a;padding:20px;border-radius:8px;max-width:480px;width:94%;border:2px solid #334155;color:#fff;max-height:90vh;overflow-y:auto}
+    .onboard-modal h3{color:#ef4444;margin-top:0}
+    .onboard-picture{text-align:center;margin-bottom:12px}
+    .onboard-picture img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:2px solid #ef4444}
+    .onboard-picture p{color:#94a3b8;font-size:11px;margin:4px 0}
+    .onboard-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .onboard-row .full{grid-column:1/-1}
+    .onboard-modal input, .onboard-modal select{width:100%;padding:8px;border-radius:4px;border:1px solid #334155;background:#071127;color:#fff}
+    .onboard-modal input[type="file"]{padding:4px}
+    .onboard-actions{display:flex;gap:10px;margin-top:12px}
+    .onboard-actions .btn{flex:1}
+    .onboard-note{font-size:12px;color:#94a3b8;margin-top:8px}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">UP<span>LIFT</span></div>
+  <ul>
+    <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="chest.html">Chest</a></li>
+    <li><a href="back.html">Back</a></li>
+    <li><a href="legs.html">Legs</a></li>
+    <li><a href="arms.html">Arms</a></li>
+    <li><a href="progress.html">Progress</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="trainer-login.html" class="btn btn-secondary">Trainer Login</a>
+    <a href="#" class="btn">Register</a>
+  </div>
+</nav>
+
+<main class="hero">
+  <div>
+    <h1>BUILD STRENGTH<br><span>STAY CONSISTENT</span></h1>
+    <p>Follow targeted workouts for each muscle group — pick a day and get moving.</p>
+  </div>
+</main>
+
+<section>
+  <h2 class="section-title">Why UPLIFT?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Focused</h3>
+      <p>One muscle group per page for clear, repeatable sessions.</p>
+    </div>
+    <div class="card">
+      <h3>Simple</h3>
+      <p>Easy-to-follow exercises and reps for every level.</p>
+    </div>
+    <div class="card">
+      <h3>Recovery</h3>
+      <p>Includes mobility and cooldown guidance to keep you training longer.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Meet Our Trainers</h2>
+  <div class="trainer-grid">
+    <div class="trainer-card-home">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Trainer 1">
+      <h3>BALA BAL</h3>
+      <p>Strength training specialist focused on performance and disciplined progression.</p>
+    </div>
+    <div class="trainer-card-home">
+      <img src="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?auto=format&fit=crop&w=900&q=80" alt="Trainer 2">
+      <h3>RAGANAL</h3>
+      <p>Certified fitness coach with experience in body transformation and recovery planning.</p>
+    </div>
+    <div class="trainer-card-home">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" alt="Trainer 3">
+      <h3>MONISH MAMMOOTTY</h3>
+      <p>Expert in hypertrophy programs, form correction, and client progress tracking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gym facilities section removed -->
+
+<section>
+  <h2 class="section-title">Protein <span>Supplement Zone</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Premium Protein Shakes</h3>
+      <p>Wide range of whey, casein, and plant-based protein powders to fuel your recovery.</p>
+    </div>
+    <div class="card">
+      <h3>Energy Bars & Supplements</h3>
+      <p>High-quality protein bars, BCAAs, and creatine to support your training goals.</p>
+    </div>
+    <div class="card">
+      <h3>Nutrition Consultation</h3>
+      <p>Expert guidance on supplement selection and nutrition planning from our certified trainers.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Recovery <span>Steam Bath Zones</span></h2>
+  <div class="steam-bath-grid">
+    <div class="steam-card">
+      <h3>Male Steam Bath</h3>
+      <p>Dedicated recovery space for male members. Relax, recover, and rejuvenate muscles after intense training sessions.</p>
+      <div class="zone-badge male">MALE</div>
+    </div>
+    <div class="steam-card">
+      <h3>Female Steam Bath</h3>
+      <p>Exclusive recovery zone for female members. Premium amenities and privacy for optimal post-workout relaxation.</p>
+      <div class="zone-badge female">FEMALE</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Membership <span>Subscriptions</span></h2>
+  <div class="subscription-grid">
+    <div class="subscription-card basic">
+      <h3>1 Month</h3>
+      <ul class="benefits">
+        <li>✓ Water & towel service</li>
+      </ul>
+      <a href="payment.html?plan=1%20Month&price=659&duration=Per%20Month&perks=Water%20%26%20towel%20service" class="btn subscription-btn">Subscribe Now</a>
+    </div>
+
+    <div class="subscription-card featured">
+      <div class="badge">Popular</div>
+      <h3>3 Months</h3>
+      <ul class="benefits">
+        <li>✓ Water & towel service</li>
+        <li class="privilege">✨ 1 free body composition analysis</li>
+        <li class="privilege">✨ 2 free training sessions</li>
+        <li class="privilege">✨ Nutrition guide included</li>
+      </ul>
+      <a href="payment.html?plan=3%20Months&price=1799&duration=Total%20(Save%20%E2%82%B9178)&perks=Water%20%26%20towel%20service|1%20free%20body%20composition%20analysis|2%20free%20training%20sessions|Nutrition%20guide%20included" class="btn subscription-btn">Subscribe Now</a>
+    </div>
+
+    <div class="subscription-card">
+      <h3>6 Months</h3>
+      <ul class="benefits">
+        <li>✓ Water & towel service</li>
+        <li class="privilege">✨ 2 free body composition analysis</li>
+        <li class="privilege">✨ 4 free training sessions</li>
+        <li class="privilege">✨ Monthly nutrition consultation</li>
+      </ul>
+      <a href="payment.html?plan=6%20Months&price=3299&duration=Total%20(Save%20%E2%82%B9655)&perks=Water%20%26%20towel%20service|2%20free%20body%20composition%20analysis|4%20free%20training%20sessions|Monthly%20nutrition%20consultation" class="btn subscription-btn">Subscribe Now</a>
+    </div>
+
+    <div class="subscription-card">
+      <h3>1 Year</h3>
+      <ul class="benefits">
+        <li>✓ Water & towel service</li>
+        <li class="privilege">✨ 4 free body composition analysis</li>
+        <li class="privilege">✨ 12 free training sessions</li>
+        <li class="privilege">✨ Weekly nutrition consultation</li>
+        <li class="privilege">✨ Free supplement consultation</li>
+        <li class="privilege">✨ Exclusive member events access</li>
+      </ul>
+      <a href="payment.html?plan=1%20Year&price=5999&duration=Total%20(Save%20%E2%82%B91909)&perks=Water%20%26%20towel%20service|4%20free%20body%20composition%20analysis|12%20free%20training%20sessions|Weekly%20nutrition%20consultation|Free%20supplement%20consultation|Exclusive%20member%20events%20access" class="btn subscription-btn">Subscribe Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 UPLIFT Gym
+</footer>
+
+<!-- Onboarding modal (shows once per browser until profile saved) -->
+<div id="onboard" class="onboard-backdrop" style="display:none">
+  <div class="onboard-modal">
+    <h3>Welcome to UPLIFT — Tell us about you</h3>
+    <div class="onboard-picture" id="ob_pic_container">
+      <input id="ob_picture" type="file" accept="image/*" style="display:block;margin:0 auto;font-size:12px">
+      <p id="ob_pic_status">Upload your profile picture (optional)</p>
+    </div>
+    <div class="onboard-row">
+      <div>
+        <label>Name</label>
+        <input id="ob_name" type="text" placeholder="Your name">
+      </div>
+      <div>
+        <label>Age</label>
+        <input id="ob_age" type="number" min="10" max="120" placeholder="Age">
+      </div>
+      <div>
+        <label>Gender</label>
+        <select id="ob_gender">
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label>Body Type</label>
+        <select id="ob_bodyType">
+          <option value="">Select</option>
+          <option value="ectomorph">Ectomorph</option>
+          <option value="mesomorph">Mesomorph</option>
+          <option value="endomorph">Endomorph</option>
+        </select>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input id="ob_phone" type="tel" placeholder="e.g., +1234567890">
+      </div>
+      <div>
+        <label>Blood Group</label>
+        <select id="ob_blood">
+          <option value="">Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+      <div class="full">
+        <label>Height (cm)</label>
+        <input id="ob_height" type="number" placeholder="e.g., 180">
+      </div>
+      <div class="full">
+        <label>Weight (kg)</label>
+        <input id="ob_weight" type="number" placeholder="e.g., 75">
+      </div>
+    </div>
+    <div class="onboard-actions">
+      <button id="ob_skip" class="btn">Skip</button>
+      <button id="ob_save" class="btn" style="background:#10b981">Save</button>
+    </div>
+    <div class="onboard-note">We store this information locally on your device only — no server upload.</div>
+  </div>
+</div>
+
+<script>
+  // Carousel auto-scroll setup
+  (function(){
+    const track = document.getElementById('carouselTrack');
+    if(!track) return;
+    
+    const items = track.querySelectorAll('.carousel-item');
+    const itemWidth = 550 + 20; // width + margin
+    const totalWidth = itemWidth * (items.length - 1);
+    
+    track.style.width = totalWidth + 'px';
+  })();
+
+
+  (function(){
+    const modal = document.getElementById('onboard');
+    const saved = localStorage.getItem('upliftProfile');
+    let onboardPicture = null;
+    function open(){ modal.style.display = 'flex'; }
+    function close(){ modal.style.display = 'none'; }
+    if(!saved && !localStorage.getItem('upliftProfileSkipped')){ open(); }
+    
+    // Handle picture upload in onboarding
+    document.getElementById('ob_picture').addEventListener('change', function(e){
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt){
+        onboardPicture = evt.target.result;
+        document.getElementById('ob_pic_status').textContent = '✓ Picture uploaded';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    document.getElementById('ob_save').addEventListener('click', function(){
+      const profile = {
+        name: document.getElementById('ob_name').value || '',
+        age: document.getElementById('ob_age').value || '',
+        gender: document.getElementById('ob_gender').value || '',
+        bodyType: document.getElementById('ob_bodyType').value || '',
+        phone: document.getElementById('ob_phone').value || '',
+        bloodGroup: document.getElementById('ob_blood').value || '',
+        height: document.getElementById('ob_height').value || '',
+        weight: document.getElementById('ob_weight').value || ''
+      };
+      if(onboardPicture) profile.picture = onboardPicture;
+      localStorage.setItem('upliftProfile', JSON.stringify(profile));
+      close();
+      alert('Profile saved locally. You can edit it later from Progress or Calculator pages.');
+    });
+
+    document.getElementById('ob_skip').addEventListener('click', function(){
+      localStorage.setItem('upliftProfileSkipped', '1');
+      close();
+    });
+  })();
+</script>
+
+</body>
+</html>

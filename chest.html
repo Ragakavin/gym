@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chest Workout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">UP<span>LIFT</span></div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="chest.html" class="active">Chest</a></li>
+        <li><a href="back.html">Back</a></li>
+        <li><a href="legs.html">Legs</a></li>
+        <li><a href="arms.html">Arms</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#" class="btn">Register</a>
+</nav>
+
+<header>
+    <h1>Chest Day</h1>
+</header>
+
+<div style="margin-top:18px; margin-bottom:18px; padding: 0 20px;">
+  <a class="btn" href="javascript:history.back()" style="background:#334155;">View Back</a>
+</div>
+
+<section>
+    <div class="grid" id="workoutGrid"></div>
+</section>
+
+<script>
+    const API_BASE = 'http://localhost:8080/api';
+    fetch(`${API_BASE}/chest`).then(r=>r.json()).then(data=>{
+        const c=document.getElementById('workoutGrid');
+        if(data.length===0){c.innerHTML='<p style="color:#94a3b8;text-align:center;padding:40px">Unable to load workouts.</p>';return}
+        c.innerHTML=data.map(w=>`<div class="card"><img src="${w.image}" alt="${w.name}" ><h3>${w.name}</h3><p>${w.description}</p><p><strong>Reps:</strong> ${w.reps}</p><p><strong>Instructions:</strong> ${w.instructions}</p></div>`).join('');
+    }).catch(()=>document.getElementById('workoutGrid').innerHTML='<p style="color:#94a3b8;text-align:center;padding:40px">Backend not running on port 8080.</p>');
+</script>
+
+<footer>
+    © 2026 UPLIFT Gym
+</footer>
+
+</body>
+</html>
